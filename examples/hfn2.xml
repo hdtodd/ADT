@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE diatomic [
+  <!ENTITY  vers "2.0" >
+  <!ELEMENT diatomic (title, probid, opts, atnoa, atnob,
+	              r, charge, multiplicity, basis_fn+) >
+  <!ATTLIST diatomic
+	    version  CDATA  "1.0" >
+  <!ELEMENT title (#PCDATA) >
+  <!ELEMENT probid (#PCDATA) >
+  <!ELEMENT opts (#PCDATA) >
+  <!ELEMENT atnoa (#PCDATA) >
+  <!ELEMENT atnob (#PCDATA) >
+  <!ELEMENT r (#PCDATA) >
+  <!ATTLIST r
+	    range CDATA #IMPLIED
+	    plot CDATA  #IMPLIED >
+  <!-- Range looks like <low-bound>|<high-bound> or -<low-decrement>/+<high-decrement> 
+       plot looks like <lower-bound>(<increment>)<high-bound> -->
+  <!ELEMENT charge (#PCDATA) >
+  <!ELEMENT multiplicity (#PCDATA) >
+  <!ELEMENT basis_fn (center,n,l,zeta) >
+  <!ELEMENT center (#PCDATA) >
+  <!ELEMENT n (#PCDATA) >
+  <!ELEMENT l (#PCDATA) >
+  <!ELEMENT zeta (#PCDATA) >
+  <!ATTLIST zeta
+	    range CDATA #IMPLIED >
+]>
+
+<diatomic version="&vers;" >
+<title>HF Minimum Basis Test Case For DIATOMIC</title>
+<probid>HF</probid>
+<opts>0,1,1</opts>
+<atnoa>9</atnoa>
+<atnob>1</atnob>
+<r range="-20%/+30%">1.733</r>
+<charge>0</charge>
+<multiplicity>1</multiplicity>
+<basis_fn><center>1</center><n>1</n><l>0</l><zeta range="+1.0/-2.0">8.7</zeta></basis_fn>
+<basis_fn><center>1</center><n>2</n><l>0</l><zeta>2.6</zeta></basis_fn>
+<basis_fn><center>1</center><n>2</n><l>1</l><zeta range="-10%/+10%">2.6</zeta></basis_fn>
+<basis_fn><center>2</center><n>1</n><l>0</l><zeta range="-0.2/+0.3">1.0</zeta></basis_fn>
+</diatomic>
