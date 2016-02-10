@@ -1,4 +1,4 @@
-# ADT -- Atomic/Diatomic/Triatomic Molecular Orbital & Geometry Specification
+# Atomic/Diatomic/Triatomic Molecular Orbital & Geometry Specification
 
 This project implements code to read XML data that describe
 a molecular structure and atomic orbitals into internal variables
